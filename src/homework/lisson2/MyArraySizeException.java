@@ -1,5 +1,4 @@
 package homework.lisson2;
-
 public class MyArraySizeException extends RuntimeException{
     int row, column;
     public MyArraySizeException(int row,int column){
