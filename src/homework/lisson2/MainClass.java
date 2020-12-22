@@ -1,16 +1,13 @@
 package homework.lisson2;
 import java.util.Scanner;
 public class MainClass {
-
     public static void main(String[] args) {
         int row;
         int column;
         Scanner sc = new Scanner(System.in);
-
         System.out.println("Введите значения для двумерного массива. Выберите размер. Строка и столбец:");
         row = sc.nextInt();
         column = sc.nextInt();
-
         String[][] newArray = new String[row][column];
         try {
             createArr(newArray, sc, row, column);
@@ -22,7 +19,6 @@ public class MainClass {
             e.printStackTrace();
         }
     }
-
     private static void createArr(String[][] array, Scanner sc, int row, int column) {
         if (row != 4 || column != 4) throw new MyArraySizeException(row, column);
         System.out.println("Create Array ");
@@ -35,7 +31,6 @@ public class MainClass {
         printArr(array);
         calcArr(array, row, column);
     }
-
     private static int calcArr(String[][] array, int row, int column) {
         int sum = 0;
         int[][] arrayInt = new int[row][column];
@@ -52,7 +47,6 @@ public class MainClass {
         printArrInt(arrayInt);
         return sum;
     }
-
     private static void printArr(String[][] array) {
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
@@ -61,7 +55,6 @@ public class MainClass {
             System.out.println();
         }
     }
-
     private static void printArrInt(int[][] array) {
         System.out.println("This is arr Int ");
         for (int i = 0; i < array.length; i++) {
